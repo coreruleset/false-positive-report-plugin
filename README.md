@@ -12,6 +12,17 @@ to be generated).
 Logs are read from memory using `WEBSERVER_ERROR_LOG` variable, so plugin does
 not need any permissions to access log files on filesystem.
 
+> [!WARNING]
+> **Use at your own risk.**
+>
+> This plugin should only be used if the **number of false positives is sufficiently low**.
+> With a high volume of false positives, e-mails will **flood the recipient inbox** and
+> will **clog the SMTP server**, potentially backing up e-mails for hours.
+>
+> **The CRS team cannot and will not support** issues with the SMTP server or e-mail floods
+> resulting from the use of this plugin.
+
+
 ## Prerequisities
 
  * ModSecurity compiled with Lua support
