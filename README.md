@@ -25,10 +25,14 @@ not need any permissions to access log files on filesystem.
 
 ## Prerequisities
 
- * ModSecurity compiled with Lua support
- * LuaSocket library
- * LuaSec library (optional, for TLS)
- * plugin is able to catch only messages returned by rules with `log` action
+* ModSecurity compiled with Lua support
+* LuaSocket library
+* LuaSec library (optional, for TLS)
+* Rules for which an e-mail is expected to be sent have the `log` action. The plugin relies
+  on the `log` action to work.
+* A working SMTP server (configuration not covered by this documentation). The SMTP
+  server should be configured with rate limiting to prevent e-mail floods in case of
+  a sudden large volume of triggered CRS rules.
 
 ## How to determine whether you have Lua support in ModSecurity
 
@@ -66,6 +70,17 @@ of installation on Debian linux:
 For full and up to date instructions for the different available plugin
 installation methods, refer to [How to Install a Plugin](https://coreruleset.org/docs/concepts/plugins/#how-to-install-a-plugin)
 in the official CRS documentation.
+
+### Setup verification
+
+After installation and configuration (see next section), the plugin should be tested
+to ensure that it works as desired. A simple test for the SMTP setup is to send a
+request that is known trigger CRS to the server:
+```
+curl "http://localhost?test=/etc/passwd"
+```
+After sending the request, an e-mail should arrive in the configured e-mail inbox.
+
 
 ## Configuration
 
@@ -271,11 +286,6 @@ special characters (for example `-` and `%`) as magic characters which has
 special meaning. If you want to match such characeters, you need to escape them
 using `%` character. For example, this pattern can be used to match
 `wp-config.php`: `wp%-config`
-
-## Testing
-
-After configuration, plugin should be tested, for example, using:  
-...
 
 ## License
 
