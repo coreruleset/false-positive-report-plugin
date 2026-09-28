@@ -19,4 +19,4 @@ tests:
           uri: /get/
         output:
           log:
-            no_expect_ids:
+            expect_ids:
