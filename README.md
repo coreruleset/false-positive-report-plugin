@@ -85,9 +85,11 @@ example below. There must be no gap in setting names numbering - all patterns
 after a first gap will be ignored.
 
 Example:
+```
 tx.false-positive-report-plugin_smtp_cc_1=first@example.com
 tx.false-positive-report-plugin_smtp_cc_2=second@example.com
 tx.false-positive-report-plugin_smtp_cc_3=third@example.com
+```
 
 Default value:
 
@@ -216,9 +218,11 @@ after a first gap will be ignored.
 See `Pattern matching` section below.
 
 Example:
+```
 tx.false-positive-report-plugin_filter_ignore_request_uri_1=/.env
 tx.false-positive-report-plugin_filter_ignore_request_uri_2=wp%-config
 tx.false-positive-report-plugin_filter_ignore_request_uri_3=/.git/config
+```
 
 Default value:
 
@@ -234,9 +238,11 @@ example below. There must be no gap in setting names numbering.
 See `Pattern matching` section below.
 
 Example:
+```
 tx.false-positive-report-plugin_filter_ignore_msg_1=Host header is a numeric IP address
 tx.false-positive-report-plugin_filter_ignore_msg_2=Found User%-Agent associated with security scanner
 tx.false-positive-report-plugin_filter_ignore_msg_3=Fake bot detected
+```
 
 Default value:
 
