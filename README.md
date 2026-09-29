@@ -85,9 +85,11 @@ example below. There must be no gap in setting names numbering - all patterns
 after a first gap will be ignored.
 
 Example:
+```
 tx.false-positive-report-plugin_smtp_cc_1=first@example.com
 tx.false-positive-report-plugin_smtp_cc_2=second@example.com
 tx.false-positive-report-plugin_smtp_cc_3=third@example.com
+```
 
 Default value:
 
@@ -216,9 +218,11 @@ after a first gap will be ignored.
 See `Pattern matching` section below.
 
 Example:
+```
 tx.false-positive-report-plugin_filter_ignore_request_uri_1=/.env
 tx.false-positive-report-plugin_filter_ignore_request_uri_2=wp%-config
 tx.false-positive-report-plugin_filter_ignore_request_uri_3=/.git/config
+```
 
 Default value:
 
@@ -234,9 +238,11 @@ example below. There must be no gap in setting names numbering.
 See `Pattern matching` section below.
 
 Example:
+```
 tx.false-positive-report-plugin_filter_ignore_msg_1=Host header is a numeric IP address
 tx.false-positive-report-plugin_filter_ignore_msg_2=Found User%-Agent associated with security scanner
 tx.false-positive-report-plugin_filter_ignore_msg_3=Fake bot detected
+```
 
 Default value:
 
@@ -268,7 +274,7 @@ After configuration, plugin should be tested, for example, using:
 
 ## License
 
-Copyright (c) 2022-2025 OWASP Core Rule Set project. All rights reserved.
+Copyright (c) 2022-2026 OWASP Core Rule Set project. All rights reserved.
 
 The OWASP CRS and its official plugins are distributed
 under Apache Software License (ASL) version 2. Please see the enclosed LICENSE
