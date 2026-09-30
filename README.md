@@ -191,7 +191,7 @@ Default value: 949110 959100 980130 980140
 
 Comma separated list of IP addresses to watch for error messages. Logs from
 requests which does not match this list will be ignored. Keep this empty
-to watch IP addresses.
+to watch all IP addresses.
 
 Example: 1.1.1.1,2.2.2.2
 
